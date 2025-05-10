@@ -1,4 +1,10 @@
-import type { Site, SocialLink, Project, Experience } from "@/types";
+import type {
+  Site,
+  SocialLink,
+  Project,
+  Experience,
+  NavigationLink,
+} from "@/types";
 
 export const SITE: Site = {
   title: "Nelan",
@@ -7,7 +13,7 @@ export const SITE: Site = {
   href: "http://localhost:3000",
 };
 
-export const NAV_LINKS: SocialLink[] = [
+export const NAV_LINKS: NavigationLink[] = [
   {
     href: "/",
     label: "home",
@@ -24,8 +30,28 @@ export const NAV_LINKS: SocialLink[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: "https://github.com/nelanjoe",
     label: "Github",
+    name: "nelanjoe",
+    href: "https://github.com/nelanjoe",
+    icon: "simple-icons:github",
+  },
+  {
+    label: "LinkedIn",
+    name: "nelan17",
+    href: "https://www.linkedin.com/in/nelan17/",
+    icon: "simple-icons:linkedin",
+  },
+  {
+    label: "Instagram",
+    name: "nelan_17",
+    href: "https://www.instagram.com/nelan_17",
+    icon: "simple-icons:instagram",
+  },
+  {
+    label: "Email",
+    name: "nelanjorelat@gmail.com",
+    href: "mailto:nelanjorelat@gmail.com",
+    icon: "simple-icons:maildotru",
   },
 ];
 
@@ -82,16 +108,19 @@ export const EXPERIENCES: Experience[] = [
   {
     title: "Operational Staff",
     company: "PT Nurul Fikri Cipta Inovasi",
+    href: "https://nfacademy.id/",
     date: "February 2022 - August 2023",
   },
   {
     title: "Asisstant Lecuturer of Basic Programming",
     company: "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
+    href: "https://nurulfikri.ac.id/",
     date: "March - July 2023",
   },
   {
     title: "Asisstant Lecuturer of Database",
     company: "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
+    href: "https://nurulfikri.ac.id/",
     date: "November 2022 - March 2023",
   },
 ];

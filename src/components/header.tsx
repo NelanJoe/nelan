@@ -7,8 +7,8 @@ import { ModeToggle } from "./mode-toggle";
 export default function Header() {
   return (
     <header>
-      <nav className="max-w-3xl mx-auto px-4 flex items-center justify-between h-20">
-        <div className="flex items-center gap-4 h-5">
+      <nav className="mx-auto flex h-20 max-w-3xl items-center justify-between px-4">
+        <div className="flex h-5 items-center gap-4">
           <Link href="/">
             <Avatar>
               <AvatarFallback>Ne</AvatarFallback>

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { EXPERIENCES, PROJECTS } from "@/constants";
 import DefaultLayout from "@/layouts/default";
 import ProjectCard from "@/components/project-card";
@@ -6,14 +7,25 @@ import ExperienceCard from "@/components/experience-card";
 export default function Home() {
   return (
     <DefaultLayout title="Home">
-      <section className="py-10 space-y-20">
+      <motion.section
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.5,
+        }}
+        className="space-y-20 py-10"
+      >
         <div className="space-y-5">
           <div>
-            <h2 className="font-semibold text-lg leading-relaxed">Nelan</h2>
+            <h2 className="animate-in fade-in text-lg leading-relaxed font-semibold duration-150">
+              Nelan
+            </h2>
             <p>Frontend Developer</p>
           </div>
           <div>
-            <p className="leading-relaxed text-foreground/60">
+            <p className="text-foreground/60 leading-relaxed">
               Informatics Engineering student from STT Terpadu Nurul Fikri with
               a current GPA of 3.68 who wants to develop a career in the field
               of Frontend Developer. Have a strong foundation in problem
@@ -23,7 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <h2 className="font-semibold text-lg leading-relaxed">My Projects</h2>
+          <h2 className="text-lg leading-relaxed font-semibold">My Projects</h2>
           <div className="mt-6 grid grid-cols-1 gap-3">
             {PROJECTS.map((project) => (
               <ProjectCard key={project.title} project={project} />
@@ -31,16 +43,16 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <h2 className="font-semibold text-lg leading-relaxed">
+          <h2 className="text-lg leading-relaxed font-semibold">
             Work Experience
           </h2>
-          <div className="flex flex-col gap-2 mt-6">
+          <div className="mt-6 flex flex-col gap-2">
             {EXPERIENCES.map((experience) => (
               <ExperienceCard key={experience.title} experience={experience} />
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
     </DefaultLayout>
   );
 }

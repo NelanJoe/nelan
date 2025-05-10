@@ -5,9 +5,16 @@ export type Site = {
   author: string;
 };
 
-export type SocialLink = {
+export type NavigationLink = {
   href: string;
   label: string;
+};
+
+export type SocialLink = {
+  label: string;
+  name: string;
+  href: string;
+  icon: string;
 };
 
 export type Project = {
@@ -21,6 +28,7 @@ export type Project = {
 
 export type Experience = {
   title: string;
+  href: string;
   company: string;
   date: string;
 };

@@ -8,26 +8,27 @@ export default function ProjectCard({ project }: { project: Project }) {
     <Link
       key={project.title}
       href={project.href}
-      className="flex gap-2 justify-between group hover:bg-muted/50 p-3 hover:dark:bg-slate-100/10 rounded-lg transition-colors duration-150"
+      className="group border-muted/0 hover:border-muted/10 hover:bg-muted/50 -mx-2 flex justify-between gap-6 rounded-md p-2 transition-colors duration-150"
       target="_blank"
     >
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col gap-4 md:flex-row">
         <Image
           src={project.cover}
           alt={project.title}
           width={500}
           height={500}
-          className="w-full rounded-md md:w-[120px] saturate-100 group-hover:saturate-150 transition-colors duration-150"
+          className="w-full rounded-md saturate-100 transition-colors duration-150 group-hover:saturate-150 md:w-[120px]"
+          priority
         />
         <div className="space-y-2">
           <div className="space-y-1">
             <div className="flex items-center justify-between">
               <h3>{project.title}</h3>
-              <time className="opacity-60 text-sm md:hidden">
+              <time className="text-sm opacity-60 md:hidden">
                 {project.date}
               </time>
             </div>
-            <p className="opacity-60 text-sm">{project.description}</p>
+            <p className="text-sm opacity-60">{project.description}</p>
           </div>
           <div className="space-x-2">
             {project.tags.map((tag, idx) => (
@@ -43,7 +44,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
       <div className="hidden md:block">
-        <time className="opacity-60 text-sm">{project.date}</time>
+        <time className="text-sm opacity-60">{project.date}</time>
       </div>
     </Link>
   );
