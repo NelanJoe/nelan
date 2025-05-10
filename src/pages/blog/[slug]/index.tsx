@@ -48,9 +48,9 @@ export default function Post({
             {post.title}
           </h2>
         </div>
-        <div>
+        <article className="prose dark:prose-invert prose-h1:font-bold prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-md prose-headings:underline mx-auto">
           <MDXContent code={post.mdx} />
-        </div>
+        </article>
       </section>
     </DefaultLayout>
   );
