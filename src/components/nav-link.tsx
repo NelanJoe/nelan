@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function NavLink({
   href,
@@ -13,7 +13,9 @@ export default function NavLink({
   const pathname = usePathname();
 
   const isActive =
-    pathname.endsWith(href) || (href.includes(pathname) && pathname !== "/");
+    href === "/"
+      ? pathname === "/"
+      : pathname === href || pathname.startsWith(href + "/");
 
   return (
     <Link
