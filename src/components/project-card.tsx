@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           alt={project.title}
           width={500}
           height={500}
-          className="w-full rounded-md saturate-100 transition-colors duration-150 group-hover:saturate-150 md:w-[120px]"
+          className="w-full rounded-md grayscale-100 transition-colors duration-150 group-hover:grayscale-0 md:w-[120px]"
           priority
         />
         <div className="space-y-2">

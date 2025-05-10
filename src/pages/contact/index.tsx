@@ -15,7 +15,7 @@ export default function Contact() {
           ease: "easeInOut",
           duration: 0.5,
         }}
-        className="space-y-5"
+        className="space-y-5 py-10"
       >
         <div>
           <p>

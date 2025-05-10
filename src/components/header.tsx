@@ -6,7 +6,7 @@ import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   return (
-    <header>
+    <header className="sticky top-0 z-50 bg-white/30 backdrop-blur-3xl dark:bg-zinc-900/10">
       <nav className="mx-auto flex h-20 max-w-3xl items-center justify-between px-4">
         <div className="flex h-5 items-center gap-4">
           <Link href="/">
