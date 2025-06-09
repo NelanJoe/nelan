@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Forum App",
-    description: "System Information Geographic",
+    description: "Forum Discussion For Community Learning",
     cover: "/images/forum-app.png",
     href: "https://forum-app-blond.vercel.app/",
     tags: ["ReactJs", "JavaScript", "Redux", "Cypress", "Tailwindcss"],
