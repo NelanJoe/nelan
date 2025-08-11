@@ -26,10 +26,10 @@ export default function Home() {
           </div>
           <div>
             <p className="text-foreground/60 leading-relaxed">
-              Informatics Engineering student from STT Terpadu Nurul Fikri with
-              a current GPA of 3.68 who wants to develop a career in the field
-              of Frontend Developer. Have a strong foundation in problem
-              solving, team communication, communication, and skills in managing
+              Freshgraduate Informatics Engineering from STT Terpadu Nurul
+              Fikri. I am a person who wants to develop a career in the field of
+              Frontend Developer. Have a strong foundation in problem solving,
+              team communication, communication, and skills in managing
               programming code in a structured manner.
             </p>
           </div>
