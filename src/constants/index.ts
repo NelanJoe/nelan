@@ -70,6 +70,7 @@ export const PROJECTS: Project[] = [
       "Shadcn UI",
     ],
     date: "2024",
+    className: "md:col-span-2",
   },
   {
     title: "SIG Frontend",
@@ -85,6 +86,7 @@ export const PROJECTS: Project[] = [
       "Shadcn UI",
     ],
     date: "2024",
+    className: "md:col-span-1",
   },
   {
     title: "Forum App",
@@ -93,6 +95,7 @@ export const PROJECTS: Project[] = [
     href: "https://forum-app-blond.vercel.app/",
     tags: ["ReactJs", "JavaScript", "Redux", "Cypress", "Tailwindcss"],
     date: "2024",
+    className: "md:col-span-1",
   },
   {
     title: "MOOC Last King Academy",
@@ -101,6 +104,7 @@ export const PROJECTS: Project[] = [
     href: "https://github.com/NelanJoe/final-project-fe-binar",
     tags: ["ReactJs", "JavaScript", "Redux", "RTK Query", "Tailwindcss"],
     date: "2023",
+    className: "md:col-span-2",
   },
 ];
 

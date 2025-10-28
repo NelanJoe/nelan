@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Separator } from "./ui/separator";
 import NavLink from "./nav-link";
-import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   return (
@@ -29,7 +29,7 @@ export default function Header() {
           <NavLink href="/contact">contact</NavLink>
         </div>
         <div>
-          <ModeToggle />
+          <AnimatedThemeToggler duration={200} />
         </div>
       </nav>
     </header>

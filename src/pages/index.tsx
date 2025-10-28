@@ -3,6 +3,7 @@ import { EXPERIENCES, PROJECTS } from "@/constants";
 import DefaultLayout from "@/layouts/default";
 import ProjectCard from "@/components/project-card";
 import ExperienceCard from "@/components/experience-card";
+import { BentoGrid } from "@/components/ui/bento-grid";
 
 export default function Home() {
   return (
@@ -25,22 +26,27 @@ export default function Home() {
             <p>Frontend Developer</p>
           </div>
           <div>
-            <p className="text-foreground/60 leading-relaxed">
-              Freshgraduate Informatics Engineering from STT Terpadu Nurul
-              Fikri. I am a person who wants to develop a career in the field of
-              Frontend Developer. Have a strong foundation in problem solving,
-              team communication, communication, and skills in managing
-              programming code in a structured manner.
+            <p className="leading-relaxed">
+              I&apos;m a{" "}
+              <span className="bg-underline relative inline-block bg-transparent transition-colors duration-300 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:bg-indigo-500 hover:bg-indigo-200 before:dark:bg-indigo-400">
+                frontend developer
+              </span>{" "}
+              based in{" "}
+              <span className="bg-underline relative inline-block bg-transparent transition-colors duration-300 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:bg-indigo-500 hover:bg-indigo-200 before:dark:bg-indigo-400">
+                Bogor, Indonesia.
+              </span>{" "}
+              I specialize in building user interfaces for web applications
+              using Next.js, React, and Tailwind CSS.
             </p>
           </div>
         </div>
-        <div>
+        <div className="space-y-6">
           <h2 className="text-lg leading-relaxed font-semibold">My Projects</h2>
-          <div className="mt-6 grid grid-cols-1 gap-3">
+          <BentoGrid className="mx-auto max-w-4xl md:auto-rows-[20rem]">
             {PROJECTS.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
-          </div>
+          </BentoGrid>
         </div>
         <div>
           <h2 className="text-lg leading-relaxed font-semibold">

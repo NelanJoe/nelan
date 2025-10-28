@@ -1,50 +1,45 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Badge } from "./ui/badge";
 import type { Project } from "@/types";
+import { Icon } from "@iconify/react";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link
-      key={project.title}
-      href={project.href}
-      className="group border-muted/0 hover:border-muted/10 hover:bg-muted/50 -mx-2 flex justify-between gap-6 rounded-md p-2 transition-colors duration-150"
-      target="_blank"
-    >
-      <div className="flex flex-col gap-4 md:flex-row">
+    <Link href={project.href} target="_blank" className={project.className}>
+      <div className="relative flex flex-col items-start justify-between border border-black/20 p-4 transition duration-150 hover:scale-105 lg:h-70 dark:border-white/20">
+        <Icon
+          icon="mynaui:plus"
+          className="absolute -top-3 -left-3 h-6 w-6 text-black dark:text-white"
+        />
+        <Icon
+          icon="mynaui:plus"
+          className="absolute -bottom-3 -left-3 h-6 w-6 text-black dark:text-white"
+        />
+        <Icon
+          icon="mynaui:plus"
+          className="absolute -top-3 -right-3 h-6 w-6 text-black dark:text-white"
+        />
+        <Icon
+          icon="mynaui:plus"
+          className="absolute -right-3 -bottom-3 h-6 w-6 text-black dark:text-white"
+        />
+
         <Image
           src={project.cover}
           alt={project.title}
-          width={500}
-          height={500}
-          className="w-full rounded-md grayscale-100 transition-colors duration-150 group-hover:grayscale-0 md:w-[120px]"
-          priority
+          width={200}
+          height={200}
+          className="w-full rounded-md border border-black/20 object-cover lg:h-[180px] dark:border-white/20"
         />
-        <div className="space-y-2">
-          <div className="space-y-1">
-            <div className="flex items-center justify-between">
-              <h3>{project.title}</h3>
-              <time className="text-sm opacity-60 md:hidden">
-                {project.date}
-              </time>
-            </div>
-            <p className="text-sm opacity-60">{project.description}</p>
-          </div>
-          <div className="space-x-2">
-            {project.tags.map((tag, idx) => (
-              <Badge
-                key={idx}
-                variant="secondary"
-                className="text-foreground/50"
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
+
+        <div className="mt-4 space-y-2">
+          <h2 className="text-sm font-light text-black dark:text-white">
+            {project.title}
+          </h2>
+          <p className="rounded-full text-sm font-light text-black dark:border-white/20 dark:text-white">
+            {project.description}
+          </p>
         </div>
-      </div>
-      <div className="hidden md:block">
-        <time className="text-sm opacity-60">{project.date}</time>
       </div>
     </Link>
   );

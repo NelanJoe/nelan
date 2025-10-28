@@ -24,6 +24,7 @@ export type Project = {
   href: string;
   tags: string[];
   date: string;
+  className?: string;
 };
 
 export type Experience = {

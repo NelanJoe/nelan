@@ -10,7 +10,7 @@ export default function ExperienceCard({
     <Link
       href={experience.href}
       target="_blank"
-      className="hover:bg-muted/50 -mx-2 flex flex-col justify-between gap-3 rounded-xs p-2 md:flex-row"
+      className="hover:bg-muted/50 -mx-2 flex flex-col justify-between gap-3 rounded-sm px-2 py-3 md:flex-row"
     >
       <div className="space-y-1">
         <h3>{experience.company}</h3>
