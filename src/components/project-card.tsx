@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           alt={project.title}
           width={200}
           height={200}
-          className="w-full rounded-md border border-black/20 object-cover lg:h-[180px] dark:border-white/20"
+          className="w-full rounded-md border border-black/20 object-cover md:h-[180px] lg:h-[180px] dark:border-white/20"
         />
 
         <div className="mt-4 space-y-2">
