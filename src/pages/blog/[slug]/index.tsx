@@ -7,6 +7,7 @@ import type {
 } from "next";
 
 import DefaultLayout from "@/layouts/default";
+import Image from "next/image";
 
 export const getStaticPaths = (async () => {
   const paths = allPosts.map((post) => ({
