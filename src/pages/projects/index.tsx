@@ -1,9 +1,9 @@
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "motion/react";
 import DefaultLayout from "@/layouts/default";
-import { PROJECTS } from "../../constants";
-import Image from "next/image";
-import { Badge } from "../../components/ui/badge";
-import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { PROJECTS } from "@/constants";
 
 export default function ProjectsPage() {
   return (
