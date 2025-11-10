@@ -4,6 +4,8 @@ import DefaultLayout from "@/layouts/default";
 import ProjectCard from "@/components/project-card";
 import ExperienceCard from "@/components/experience-card";
 import { BentoGrid } from "@/components/ui/bento-grid";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -41,9 +43,16 @@ export default function Home() {
           </div>
         </div>
         <div className="space-y-6">
-          <h2 className="text-lg leading-relaxed font-semibold">My Projects</h2>
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg leading-relaxed font-semibold">
+              My Projects
+            </h2>
+            <Button variant="ghost" asChild>
+              <Link href="/projects">See more</Link>
+            </Button>
+          </div>
           <BentoGrid className="mx-auto max-w-4xl md:auto-rows-[20rem]">
-            {PROJECTS.map((project) => (
+            {PROJECTS.slice(0, 3).map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </BentoGrid>

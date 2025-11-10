@@ -26,6 +26,8 @@ export default function Header() {
           <Separator orientation="vertical" className="bg-slate-300/60" />
           <NavLink href="/blog">blog</NavLink>
           <Separator orientation="vertical" className="bg-slate-300/60" />
+          <NavLink href="/projects">projects</NavLink>
+          <Separator orientation="vertical" className="bg-slate-300/60" />
           <NavLink href="/contact">contact</NavLink>
         </div>
         <div>

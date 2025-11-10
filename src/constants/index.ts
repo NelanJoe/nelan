@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
     href: "https://forum-app-blond.vercel.app/",
     tags: ["ReactJs", "JavaScript", "Redux", "Cypress", "Tailwindcss"],
     date: "2024",
-    className: "md:col-span-1",
+    className: "md:col-span-3",
   },
   {
     title: "MOOC Last King Academy",
@@ -105,6 +105,15 @@ export const PROJECTS: Project[] = [
     tags: ["ReactJs", "JavaScript", "Redux", "RTK Query", "Tailwindcss"],
     date: "2023",
     className: "md:col-span-2",
+  },
+  {
+    title: "Movieflix",
+    description: "Movies app",
+    cover: "/images/movieflix.png",
+    href: "https://sveltekit-movies-app.vercel.app/",
+    tags: ["Sveltekit", "DaisyUI"],
+    date: "2023",
+    className: "md:col-span-3",
   },
 ];
 
