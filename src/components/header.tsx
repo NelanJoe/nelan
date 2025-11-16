@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import { Separator } from "./ui/separator";
+import { Separator } from "@/components/ui/separator";
 import NavLink from "./nav-link";
 
 export default function Header() {
@@ -23,11 +23,20 @@ export default function Header() {
             </Avatar>
           </Link>
           <NavLink href="/">home</NavLink>
-          <Separator orientation="vertical" className="bg-slate-300/60" />
+          <Separator
+            orientation="vertical"
+            className="bg-slate-300/60 dark:bg-indigo-500"
+          />
           <NavLink href="/projects">projects</NavLink>
-          <Separator orientation="vertical" className="bg-slate-300/60" />
+          <Separator
+            orientation="vertical"
+            className="bg-slate-300/60 dark:bg-indigo-500"
+          />
           <NavLink href="/blog">blog</NavLink>
-          <Separator orientation="vertical" className="bg-slate-300/60" />
+          <Separator
+            orientation="vertical"
+            className="bg-slate-300/60 dark:bg-indigo-500"
+          />
           <NavLink href="/contact">contact</NavLink>
         </div>
         <div>
