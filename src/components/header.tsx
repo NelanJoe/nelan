@@ -76,10 +76,10 @@ const MobileView = ({ hidden }: { hidden: string }) => {
       <Drawer>
         <DrawerTrigger asChild>
           <Button variant="ghost" size="icon">
-            <MenuIcon className="size-5" />
+            <MenuIcon className="size-6" />
           </Button>
         </DrawerTrigger>
-        <DrawerContent>
+        <DrawerContent className="space-y-5">
           <div className="mx-auto w-full max-w-xl px-4 pb-0">
             <div className="flex items-center gap-3">
               <Avatar>
@@ -93,11 +93,13 @@ const MobileView = ({ hidden }: { hidden: string }) => {
                   height={32}
                 />
               </Avatar>
-              <h2 className="text-lg font-medium">Nelan</h2>
+              <div className="flex flex-col">
+                <h2 className="text-lg">Hi</h2>
+              </div>
             </div>
             <Separator
               orientation="horizontal"
-              className="my-4 bg-slate-400 dark:bg-indigo-500"
+              className="my-4 bg-slate-800 dark:bg-indigo-500"
             />
             <div className="flex h-5 space-x-2">
               <NavLink href="/">home</NavLink>
@@ -120,8 +122,8 @@ const MobileView = ({ hidden }: { hidden: string }) => {
           </div>
           <DrawerFooter>
             <DrawerClose>
-              <Button variant="ghost" size="icon">
-                <XIcon className="size-5" />
+              <Button className="w-full" variant="secondary">
+                Close
               </Button>
             </DrawerClose>
           </DrawerFooter>
