@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { motion } from "motion/react";
-import { EXPERIENCES, PROJECTS } from "@/constants";
 import DefaultLayout from "@/layouts/default";
-import ProjectCard from "@/components/project-card";
-import ExperienceCard from "@/components/experience-card";
 import { BentoGrid } from "@/components/ui/bento-grid";
 import { Button } from "@/components/ui/button";
+import ProjectCard from "@/components/project-card";
+import ExperienceCard from "@/components/experience-card";
+import { EXPERIENCES, PROJECTS } from "@/constants";
 
 export default function Home() {
   return (
@@ -51,17 +51,18 @@ export default function Home() {
               <Link href="/projects">See more</Link>
             </Button>
           </div>
-          <BentoGrid className="mx-auto max-w-4xl md:auto-rows-[20rem]">
+          <BentoGrid>
             {PROJECTS.slice(0, 3).map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </BentoGrid>
         </div>
-        <div>
+        <div className="space-y-8">
           <h2 className="text-lg leading-relaxed font-semibold">
             Work Experience
           </h2>
-          <div className="mt-6 flex flex-col gap-2">
+          <div className="relative ml-4">
+            <div className="absolute inset-y-0 left-0 border-l-2" />
             {EXPERIENCES.map((experience) => (
               <ExperienceCard key={experience.title} experience={experience} />
             ))}

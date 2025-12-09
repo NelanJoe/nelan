@@ -28,8 +28,9 @@ export type Project = {
 };
 
 export type Experience = {
-  title: string;
   href: string;
+  title: string;
   company: string;
+  description: string;
   date: string;
 };

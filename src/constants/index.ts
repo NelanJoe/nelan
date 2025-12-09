@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
       "Shadcn UI",
     ],
     date: "2024",
-    className: "md:col-span-2",
+    className: "md:col-span-3",
   },
   {
     title: "SIG Frontend",
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
       "Shadcn UI",
     ],
     date: "2024",
-    className: "md:col-span-1",
+    className: "md:col-span-2",
   },
   {
     title: "Forum App",
@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
     href: "https://forum-app-blond.vercel.app/",
     tags: ["ReactJs", "JavaScript", "Redux", "Cypress", "Tailwindcss"],
     date: "2024",
-    className: "md:col-span-3",
+    className: "md:col-span-1",
   },
   {
     title: "MOOC Last King Academy",
@@ -119,21 +119,27 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
+    href: "https://nfacademy.id/",
     title: "Operational Staff",
     company: "PT Nurul Fikri Cipta Inovasi",
-    href: "https://nfacademy.id/",
+    description:
+      "Working as a zoom administrator for Kampus Merdeka classes, Manage Public classes & Private classes, Manage attendance link for mentees of Kampus Merdeka program, Maintain, create & manage certificates for Kampus Merdeka program mentee, Assist teachers when there are problems in the classroom or outside the classroom",
     date: "February 2022 - August 2023",
   },
   {
+    href: "https://nurulfikri.ac.id/",
     title: "Asisstant Lecuturer of Basic Programming",
     company: "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
-    href: "https://nurulfikri.ac.id/",
+    description:
+      "Taught the Basic Fundamentals of Programming course using the Python language to improve students' understanding of problem solving using the python programming language, provide practical exercises, and explain key concepts in an easy-to-understand manner. Share effective tips and tricks for learning basic programming, Increase student motivation and learning retention by 50% in three months, By providing easy-to-follow advice, using everyday analogies, and putting together a structured study guide.",
     date: "March - July 2023",
   },
   {
+    href: "https://nurulfikri.ac.id/",
     title: "Asisstant Lecuturer of Database",
     company: "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
-    href: "https://nurulfikri.ac.id/",
+    description:
+      "Teaching database courses to enhance students' understanding of data management by delivering lessons, providing practical exercises, and explaining key concepts. Share effective tips and tricks for learning basic programming, Increase student motivation and learning retention by 50% in three months, By providing easy-to-follow advice, using everyday analogies, and putting together a structured study guide.",
     date: "November 2022 - March 2023",
   },
 ];
