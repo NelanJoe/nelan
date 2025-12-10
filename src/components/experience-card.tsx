@@ -1,5 +1,6 @@
 import { Building2Icon, CalendarRangeIcon } from "lucide-react";
 import type { Experience } from "@/types";
+import { Badge } from "./ui/badge";
 
 export default function ExperienceCard({
   experience,
