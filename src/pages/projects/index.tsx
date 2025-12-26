@@ -29,7 +29,7 @@ export default function ProjectsPage() {
               key={index + 1}
               href={project.href}
               target="_blank"
-              className="group space-y-4 overflow-hidden rounded-md shadow transition-all duration-150 ease-in-out hover:shadow-md hover:ring-1 hover:ring-purple-500"
+              className="group space-y-4 overflow-hidden rounded-md shadow-lg transition-all duration-150 ease-in-out hover:outline-1"
             >
               <div>
                 <Image
