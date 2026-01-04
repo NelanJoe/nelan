@@ -34,12 +34,16 @@ const posts = defineCollection({
       remarkPlugins: [remarkGfm],
     });
 
-    const slug = post._meta.path;
+    const pathSegments = post._meta.path.split("/");
+    const locale = pathSegments[0];
+
+    const slug = pathSegments.slice(1).join("/");
 
     return {
       ...post,
       mdx,
       slug,
+      locale,
     };
   },
 });

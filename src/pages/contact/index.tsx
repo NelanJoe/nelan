@@ -1,12 +1,20 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Icon } from "@iconify/react";
+import path from "path";
+import fs from "fs/promises";
+import type { GetStaticPropsContext } from "next";
+import { useTranslations } from "next-intl";
+
 import { SOCIAL_LINKS } from "@/constants";
 import DefaultLayout from "@/layouts/default";
 
 export default function Contact() {
+  const t = useTranslations("ContactPage");
+  const tSocials = useTranslations("Socials");
+
   return (
-    <DefaultLayout title="Contact">
+    <DefaultLayout title={t("meta_title")}>
       <motion.section
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,10 +26,7 @@ export default function Contact() {
         className="space-y-5 py-10"
       >
         <div>
-          <p>
-            If you want to get in touch with me about something or just to say
-            hi, reach out on social media or send me an email.
-          </p>
+          <p>{t("description")}</p>
         </div>
         <div className="flex flex-col gap-2">
           {SOCIAL_LINKS.map((link) => (
@@ -35,7 +40,7 @@ export default function Contact() {
               </div>
               <div className="flex flex-col">
                 <span className="text-sm opacity-60">{link.name}</span>
-                <span>{link.label}</span>
+                <span>{tSocials(link.label.toLowerCase())}</span>
               </div>
             </Link>
           ))}
@@ -43,4 +48,21 @@ export default function Contact() {
       </motion.section>
     </DefaultLayout>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  try {
+    const filePath = path.join(process.cwd(), "src", "i8n", `${locale}.json`);
+    const fileContents = await fs.readFile(filePath, "utf8");
+    const messages = JSON.parse(fileContents);
+
+    return {
+      props: {
+        messages,
+      },
+    };
+  } catch (error) {
+    console.error("Error loading localization:", error);
+    return { props: { messages: {} } };
+  }
 }

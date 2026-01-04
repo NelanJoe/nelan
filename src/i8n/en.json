@@ -1,0 +1,103 @@
+{
+  "Site": {
+    "title": "Nelan",
+    "description": "Welcome to Nelan portfolio",
+    "author": "Nelan"
+  },
+  "Navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "Socials": {
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "drawer": {
+      "title": "Menu",
+      "role": "Frontend Developer",
+      "close": "Close"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "en"
+  },
+  "Theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Index": {
+    "meta_title": "Home",
+    "name": "Nelan",
+    "tagline": "Frontend developer based in Indonesia",
+    "about": "I'm a <highlight>frontend developer</highlight> based in <highlight>Bogor, Indonesia.</highlight> I specialize in building user interfaces for web applications using Next.js, React, and Tailwind CSS.",
+    "projects_title": "My Projects",
+    "see_more": "See more",
+    "experience_title": "Work Experience"
+  },
+  "Projects": {
+    "wealth_wise": {
+      "title": "Wealth Wise",
+      "description": "Financial Tracker App"
+    },
+    "sig_frontend": {
+      "title": "SIG Frontend",
+      "description": "System Information Geographic"
+    },
+    "forum_app": {
+      "title": "Forum App",
+      "description": "Forum Discussion For Community Learning"
+    },
+    "mooc_last_king": {
+      "title": "MOOC Last King Academy",
+      "description": "Massive Open Online Course for helping others"
+    },
+    "movieflix": {
+      "title": "Movieflix",
+      "description": "Movies App"
+    }
+  },
+  "ProjectsPage": {
+    "meta_title": "Projects",
+    "title": "All Projects",
+    "description": "A collection of projects I've worked on."
+  },
+  "Experiences": {
+    "operational_staff": {
+      "title": "Operational Staff",
+      "description": "Working as a Zoom administrator for Kampus Merdeka classes, Manage Public classes & Private classes, Manage attendance link for mentees of Kampus Merdeka program, Maintain, create & manage certificates for Kampus Merdeka program mentee, Assist teachers when there are problems in the classroom or outside the classroom.",
+      "date": "February 2022 - August 2023"
+    },
+    "asdos_bp": {
+      "title": "Assistant Lecturer of Basic Programming",
+      "description": "Taught the Basic Fundamentals of Programming course using the Python language to improve students' understanding of problem-solving using the Python programming language, provide practical exercises, and explain key concepts in an easy-to-understand manner. Share effective tips and tricks for learning basic programming, Increase student motivation and learning retention by 50% in three months, by providing easy-to-follow advice, using everyday analogies, and putting together a structured study guide.",
+      "date": "March - July 2023"
+    },
+    "asdos_db": {
+      "title": "Assistant Lecturer of Database",
+      "description": "Teaching database courses to enhance students' understanding of data management by delivering lessons, providing practical exercises, and explaining key concepts. Share effective tips and tricks for learning basic programming, Increase student motivation and learning retention by 50% in three months, by providing easy-to-follow advice, using everyday analogies, and putting together a structured study guide.",
+      "date": "November 2022 - March 2023"
+    }
+  },
+  "ContactPage": {
+    "meta_title": "Contact",
+    "description": "If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email."
+  },
+  "ErrorPage": {
+    "title": "{statusCode} - Error",
+    "server_error": "An error {statusCode} occurred on server",
+    "client_error": "An error occurred on client",
+    "back_home": "Back to Home"
+  }
+}

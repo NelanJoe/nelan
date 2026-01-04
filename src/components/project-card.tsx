@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           src={project.cover}
           width={200}
           height={200}
-          className="w-full rounded-md border border-black/20 bg-cover object-cover md:h-[200px] lg:h-[220px] dark:border-white/20"
+          className="w-full rounded-md border border-black/20 bg-cover object-cover md:h-50 lg:h-55 dark:border-white/20"
         />
       }
       badge={

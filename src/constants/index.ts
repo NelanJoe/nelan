@@ -6,9 +6,26 @@ import type {
   NavigationLink,
 } from "@/types";
 
+const TECH_STACK = {
+  REACT: "React.js",
+  NEXT: "Next.js",
+  TS: "TypeScript",
+  JS: "JavaScript",
+  TAILWIND: "Tailwind CSS",
+  SHADCN: "Shadcn UI",
+  FIREBASE: "Firebase",
+  QUERY: "Tanstack Query",
+  REDUX: "Redux",
+  CYPRESS: "Cypress",
+  LEAFLET: "Leaflet",
+  SVELTE: "SvelteKit",
+  DAISY: "DaisyUI",
+  RTK: "RTK Query",
+} as const;
+
 export const SITE: Site = {
   title: "Nelan",
-  description: "Welcome to Nelan porfolio",
+  description: "Site.description",
   author: "Nelan",
   href: "http://localhost:3000",
 };
@@ -16,15 +33,15 @@ export const SITE: Site = {
 export const NAV_LINKS: NavigationLink[] = [
   {
     href: "/",
-    label: "home",
+    label: "Navigation.home",
   },
   {
     href: "/blog",
-    label: "blog",
+    label: "Navigation.blog",
   },
   {
     href: "/contact",
-    label: "contact",
+    label: "Navigation.contact",
   },
 ];
 
@@ -55,91 +72,109 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
-export const PROJECTS: Project[] = [
+// 2. Data Projects
+export const PROJECTS: (Project & { id: string })[] = [
   {
+    id: "wealth_wise",
     title: "Wealth Wise",
-    description: "Fincancial Tracker App",
+    description: "Financial Tracker App",
     cover: "/images/wealth-wise.png",
     href: "https://wealth-wise-eight.vercel.app/",
-    tags: [
-      "ReactJs",
-      "TypeScript",
-      "Tanstack React Query",
-      "Firebase",
-      "Tailwindcss",
-      "Shadcn UI",
-    ],
     date: "2024",
     className: "md:col-span-3",
+    tags: [
+      TECH_STACK.REACT,
+      TECH_STACK.TS,
+      TECH_STACK.QUERY,
+      TECH_STACK.FIREBASE,
+      TECH_STACK.TAILWIND,
+      TECH_STACK.SHADCN,
+    ],
   },
   {
+    id: "sig_frontend",
     title: "SIG Frontend",
     description: "System Information Geographic",
     cover: "/images/sig-app.png",
     href: "https://github.com/SIG-STT-NF/frontend",
-    tags: [
-      "ReactJs",
-      "JavaScript",
-      "Tanstack React Query",
-      "Leaflet",
-      "Tailwindcss",
-      "Shadcn UI",
-    ],
     date: "2024",
     className: "md:col-span-2",
+    tags: [
+      TECH_STACK.REACT,
+      TECH_STACK.JS,
+      TECH_STACK.QUERY,
+      TECH_STACK.LEAFLET,
+      TECH_STACK.TAILWIND,
+      TECH_STACK.SHADCN,
+    ],
   },
   {
+    id: "forum_app",
     title: "Forum App",
     description: "Forum Discussion For Community Learning",
     cover: "/images/forum-app.png",
     href: "https://forum-app-blond.vercel.app/",
-    tags: ["ReactJs", "JavaScript", "Redux", "Cypress", "Tailwindcss"],
     date: "2024",
     className: "md:col-span-1",
+    tags: [
+      TECH_STACK.REACT,
+      TECH_STACK.JS,
+      TECH_STACK.REDUX,
+      TECH_STACK.CYPRESS,
+      TECH_STACK.TAILWIND,
+    ],
   },
   {
+    id: "mooc_last_king",
     title: "MOOC Last King Academy",
     description: "Massive Open Online Course for helping other",
     cover: "/images/mooc-last-king.png",
     href: "https://github.com/NelanJoe/final-project-fe-binar",
-    tags: ["ReactJs", "JavaScript", "Redux", "RTK Query", "Tailwindcss"],
     date: "2023",
     className: "md:col-span-2",
+    tags: [
+      TECH_STACK.REACT,
+      TECH_STACK.JS,
+      TECH_STACK.REDUX,
+      TECH_STACK.RTK,
+      TECH_STACK.TAILWIND,
+    ],
   },
   {
+    id: "movieflix",
     title: "Movieflix",
     description: "Movies app",
     cover: "/images/movieflix.png",
     href: "https://sveltekit-movies-app.vercel.app/",
-    tags: ["Sveltekit", "DaisyUI"],
     date: "2023",
     className: "md:col-span-3",
+    tags: [TECH_STACK.SVELTE, TECH_STACK.DAISY],
   },
 ];
 
-export const EXPERIENCES: Experience[] = [
+export const EXPERIENCES: (Experience & { id: string })[] = [
   {
+    id: "operational_staff",
     href: "https://nfacademy.id/",
     title: "Operational Staff",
     company: "PT Nurul Fikri Cipta Inovasi",
-    description:
-      "Working as a zoom administrator for Kampus Merdeka classes, Manage Public classes & Private classes, Manage attendance link for mentees of Kampus Merdeka program, Maintain, create & manage certificates for Kampus Merdeka program mentee, Assist teachers when there are problems in the classroom or outside the classroom",
+    description: "Fallback description...",
     date: "February 2022 - August 2023",
   },
   {
+    id: "asdos_bp",
     href: "https://nurulfikri.ac.id/",
     title: "Asisstant Lecuturer of Basic Programming",
     company: "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
-    description:
-      "Taught the Basic Fundamentals of Programming course using the Python language to improve students' understanding of problem solving using the python programming language, provide practical exercises, and explain key concepts in an easy-to-understand manner. Share effective tips and tricks for learning basic programming, Increase student motivation and learning retention by 50% in three months, By providing easy-to-follow advice, using everyday analogies, and putting together a structured study guide.",
+    description: "Fallback description...",
     date: "March - July 2023",
   },
   {
+    id: "asdos_db",
     href: "https://nurulfikri.ac.id/",
     title: "Asisstant Lecuturer of Database",
     company: "Sekolah Tinggi Teknologi Terpadu Nurul Fikri",
-    description:
-      "Teaching database courses to enhance students' understanding of data management by delivering lessons, providing practical exercises, and explaining key concepts. Share effective tips and tricks for learning basic programming, Increase student motivation and learning retention by 50% in three months, By providing easy-to-follow advice, using everyday analogies, and putting together a structured study guide.",
+    description: "Fallback description...",
     date: "November 2022 - March 2023",
   },
 ];

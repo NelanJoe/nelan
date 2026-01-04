@@ -1,0 +1,103 @@
+{
+  "Site": {
+    "title": "Nelan",
+    "description": "Selamat datang di portofolio Nelan",
+    "author": "Nelan"
+  },
+  "Navigation": {
+    "home": "Beranda",
+    "blog": "Blog",
+    "contact": "Kontak"
+  },
+  "Socials": {
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Surel"
+  },
+  "Header": {
+    "nav": {
+      "home": "Beranda",
+      "projects": "Proyek",
+      "blog": "Blog",
+      "contact": "Kontak"
+    },
+    "drawer": {
+      "title": "Menu",
+      "role": "Pengembang Frontend",
+      "close": "Tutup"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "id"
+  },
+  "Theme": {
+    "toggle": "Ubah tema",
+    "light": "Terang",
+    "dark": "Gelap",
+    "system": "Sistem"
+  },
+  "Index": {
+    "meta_title": "Beranda",
+    "name": "Nelan",
+    "tagline": "Pengembang frontend di Indonesia",
+    "about": "Saya adalah <highlight>pengembang frontend</highlight> yang berbasis di <highlight>Bogor, Indonesia.</highlight> Saya berspesialisasi dalam membangun antarmuka pengguna untuk aplikasi web menggunakan Next.js, React, dan Tailwind CSS.",
+    "projects_title": "Proyek Saya",
+    "see_more": "Lihat selengkapnya",
+    "experience_title": "Pengalaman Kerja"
+  },
+  "Projects": {
+    "wealth_wise": {
+      "title": "Wealth Wise",
+      "description": "Aplikasi Pelacak Keuangan"
+    },
+    "sig_frontend": {
+      "title": "SIG Frontend",
+      "description": "Sistem Informasi Geografis"
+    },
+    "forum_app": {
+      "title": "Forum App",
+      "description": "Forum Diskusi untuk Pembelajaran Komunitas"
+    },
+    "mooc_last_king": {
+      "title": "MOOC Last King Academy",
+      "description": "Kursus Online Terbuka Masif untuk membantu sesama"
+    },
+    "movieflix": {
+      "title": "Movieflix",
+      "description": "Aplikasi Film"
+    }
+  },
+  "ProjectsPage": {
+    "meta_title": "Proyek",
+    "title": "Semua Proyek",
+    "description": "Kumpulan proyek yang pernah saya kerjakan."
+  },
+  "Experiences": {
+    "operational_staff": {
+      "title": "Staf Operasional",
+      "description": "Bekerja sebagai administrator Zoom untuk kelas Kampus Merdeka, Mengelola kelas Umum & Privat, Mengelola tautan kehadiran untuk mentee program Kampus Merdeka, Memelihara, membuat & mengelola sertifikat untuk mentee program Kampus Merdeka, Membantu pengajar ketika ada masalah di dalam atau di luar kelas.",
+      "date": "Februari 2022 - Agustus 2023"
+    },
+    "asdos_bp": {
+      "title": "Asisten Dosen Pemrograman Dasar",
+      "description": "Mengajarkan Dasar-dasar Pemrograman menggunakan bahasa Python untuk meningkatkan pemahaman mahasiswa tentang pemecahan masalah, memberikan latihan praktis, dan menjelaskan konsep kunci dengan cara yang mudah dipahami. Membagikan tips dan trik efektif untuk belajar pemrograman dasar, meningkatkan motivasi dan retensi belajar mahasiswa sebesar 50% dalam tiga bulan, dengan memberikan saran yang mudah diikuti, analogi sehari-hari, dan menyusun panduan belajar yang terstruktur.",
+      "date": "Maret - Juli 2023"
+    },
+    "asdos_db": {
+      "title": "Asisten Dosen Basis Data",
+      "description": "Mengajar mata kuliah basis data untuk meningkatkan pemahaman mahasiswa tentang manajemen data dengan menyampaikan materi, memberikan latihan praktis, dan menjelaskan konsep kunci. Membagikan tips dan trik efektif untuk pembelajaran, meningkatkan motivasi dan retensi belajar mahasiswa sebesar 50% dalam tiga bulan, dengan memberikan saran yang mudah diikuti, analogi sehari-hari, dan menyusun panduan belajar yang terstruktur.",
+      "date": "November 2022 - Maret 2023"
+    }
+  },
+  "ContactPage": {
+    "meta_title": "Kontak",
+    "description": "Jika Anda ingin menghubungi saya tentang sesuatu atau sekadar menyapa, hubungi saya di media sosial atau kirimkan surel."
+  },
+  "ErrorPage": {
+    "title": "{statusCode} - Galat",
+    "server_error": "Terjadi galat {statusCode} pada server",
+    "client_error": "Terjadi kesalahan pada klien",
+    "back_home": "Kembali ke Beranda"
+  }
+}

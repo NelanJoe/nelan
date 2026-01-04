@@ -1,15 +1,18 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { allPosts } from "content-collections";
-import type { InferGetServerSidePropsType } from "next";
+import type { GetStaticPropsContext, InferGetServerSidePropsType } from "next";
 
 import DefaultLayout from "@/layouts/default";
 import Image from "next/image";
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }: GetStaticPropsContext) => {
+  const posts = allPosts.filter((post) => post.locale === locale);
+
   return {
     props: {
-      posts: allPosts,
+      posts,
+      messages: (await import(`../../i8n/${locale}.json`)).default,
     },
   };
 };

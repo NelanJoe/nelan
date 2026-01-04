@@ -8,6 +8,8 @@ import type {
 import { allPosts } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
 import { ArrowLeftIcon } from "lucide-react";
+import path from "path";
+import fs from "fs/promises";
 
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@/components/ui/button";
@@ -17,6 +19,7 @@ export const getStaticPaths = (async () => {
     params: {
       slug: post.slug,
     },
+    locale: post.locale,
   }));
 
   return {
@@ -25,8 +28,25 @@ export const getStaticPaths = (async () => {
   };
 }) satisfies GetStaticPaths;
 
-export const getStaticProps = async ({ params }: GetServerSidePropsContext) => {
-  const post = allPosts.find((post) => post.slug === params?.slug);
+export const getStaticProps = async ({
+  params,
+  locale,
+}: GetServerSidePropsContext) => {
+  const filePath = path.join(process.cwd(), "src", "i8n", `${locale}.json`);
+  const fileContents = await fs.readFile(filePath, "utf8");
+
+  let messages;
+
+  try {
+    messages = JSON.parse(fileContents);
+  } catch (error) {
+    console.error("Error reading translation file:", error);
+    messages = {};
+  }
+
+  const post = allPosts.find(
+    (post) => post.slug === params?.slug && post.locale === locale,
+  );
 
   if (!post) {
     return {
@@ -36,6 +56,7 @@ export const getStaticProps = async ({ params }: GetServerSidePropsContext) => {
 
   return {
     props: {
+      messages,
       post,
     },
   };
@@ -68,6 +89,7 @@ export default function Post({
               width={200}
               height={200}
               className="h-96 w-full rounded-md object-cover"
+              priority
             />
           </div>
           <article className="prose dark:prose-invert prose-h1:font-bold prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-md prose-headings:underline mx-auto pb-10">

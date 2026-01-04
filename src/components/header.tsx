@@ -1,6 +1,12 @@
 import Link from "next/link";
-import { MenuIcon, XIcon } from "lucide-react";
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import {
+  MenuIcon,
+  HomeIcon,
+  FolderGit2Icon,
+  BookOpenIcon,
+  MailIcon,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,10 +15,14 @@ import {
   DrawerContent,
   DrawerFooter,
   DrawerTrigger,
+  DrawerHeader,
+  DrawerTitle,
 } from "@/components/ui/drawer";
 import { Separator } from "@/components/ui/separator";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import NavLink from "./nav-link";
+import LocaleSwitcher from "./locale-switcher";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -40,7 +50,8 @@ export default function Header() {
           {!isDesktop && (
             <MobileView hidden={!isDesktop ? "block" : "hidden"} />
           )}
-          <AnimatedThemeToggler duration={200} />
+          <LocaleSwitcher />
+          <ModeToggle />
         </div>
       </nav>
     </header>
@@ -48,29 +59,33 @@ export default function Header() {
 }
 
 const DesktopView = ({ hidden }: { hidden: string }) => {
+  const t = useTranslations("Header");
+
   return (
     <div className={`${hidden} flex h-5 items-center gap-4`}>
-      <NavLink href="/">home</NavLink>
+      <NavLink href="/">{t("nav.home")}</NavLink>
       <Separator
         orientation="vertical"
         className="bg-slate-300/60 dark:bg-indigo-500"
       />
-      <NavLink href="/projects">projects</NavLink>
+      <NavLink href="/projects">{t("nav.projects")}</NavLink>
       <Separator
         orientation="vertical"
         className="bg-slate-300/60 dark:bg-indigo-500"
       />
-      <NavLink href="/blog">blog</NavLink>
+      <NavLink href="/blog">{t("nav.blog")}</NavLink>
       <Separator
         orientation="vertical"
         className="bg-slate-300/60 dark:bg-indigo-500"
       />
-      <NavLink href="/contact">contact</NavLink>
+      <NavLink href="/contact">{t("nav.contact")}</NavLink>
     </div>
   );
 };
 
 const MobileView = ({ hidden }: { hidden: string }) => {
+  const t = useTranslations("Header");
+
   return (
     <div className={`${hidden}`}>
       <Drawer>
@@ -79,56 +94,85 @@ const MobileView = ({ hidden }: { hidden: string }) => {
             <MenuIcon className="size-6" />
           </Button>
         </DrawerTrigger>
-        <DrawerContent className="space-y-5">
-          <div className="mx-auto w-full max-w-xl px-4 pb-0">
-            <div className="flex items-center gap-3">
-              <Avatar>
+        <DrawerContent>
+          <DrawerHeader className="text-left">
+            <DrawerTitle>{t("drawer.title")}</DrawerTitle>
+          </DrawerHeader>
+
+          <div className="mx-auto w-full max-w-sm px-6 py-4">
+            <div className="bg-muted/40 mb-6 flex items-center gap-4 rounded-lg border p-4">
+              <Avatar className="h-12 w-12 border-2 border-stone-500">
                 <AvatarFallback>Ne</AvatarFallback>
                 <AvatarImage
                   src="https://avatars.githubusercontent.com/u/49295389?v=4"
                   alt="avatar"
-                  decoding="async"
-                  loading="lazy"
-                  width={32}
-                  height={32}
                 />
               </Avatar>
               <div className="flex flex-col">
-                <h2 className="text-lg">Hi</h2>
+                <span className="text-lg font-semibold">Nelan</span>
+                <span className="text-muted-foreground text-xs">
+                  {t("drawer.role")}
+                </span>
               </div>
             </div>
-            <Separator
-              orientation="horizontal"
-              className="my-4 bg-slate-800 dark:bg-indigo-500"
-            />
-            <div className="flex h-5 space-x-2">
-              <NavLink href="/">home</NavLink>
-              <Separator
-                orientation="vertical"
-                className="bg-slate-300/60 dark:bg-indigo-500"
-              />
-              <NavLink href="/projects">projects</NavLink>
-              <Separator
-                orientation="vertical"
-                className="bg-slate-300/60 dark:bg-indigo-500"
-              />
-              <NavLink href="/blog">blog</NavLink>
-              <Separator
-                orientation="vertical"
-                className="bg-slate-300/60 dark:bg-indigo-500"
-              />
-              <NavLink href="/contact">contact</NavLink>
+
+            {/* Menu Navigasi Vertikal */}
+            <div className="flex flex-col space-y-2">
+              <MobileLink href="/" icon={<HomeIcon className="size-5" />}>
+                {t("nav.home")}
+              </MobileLink>
+              <MobileLink
+                href="/projects"
+                icon={<FolderGit2Icon className="size-5" />}
+              >
+                {t("nav.projects")}
+              </MobileLink>
+              <MobileLink
+                href="/blog"
+                icon={<BookOpenIcon className="size-5" />}
+              >
+                {t("nav.blog")}
+              </MobileLink>
+              <MobileLink
+                href="/contact"
+                icon={<MailIcon className="size-5" />}
+              >
+                {t("nav.contact")}
+              </MobileLink>
             </div>
           </div>
-          <DrawerFooter>
-            <DrawerClose>
-              <Button className="w-full" variant="secondary">
-                Close
+
+          <DrawerFooter className="pt-2">
+            <DrawerClose asChild>
+              <Button variant="outline" className="w-full">
+                {t("drawer.close")}
               </Button>
             </DrawerClose>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </div>
+  );
+};
+
+const MobileLink = ({
+  href,
+  icon,
+  children,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  children: React.ReactNode;
+}) => {
+  return (
+    <DrawerClose asChild>
+      <Link
+        href={href}
+        className="hover:bg-muted flex items-center gap-4 rounded-md p-3 text-sm font-medium transition-colors"
+      >
+        <span className="text-stone-500 dark:text-stone-400">{icon}</span>
+        <span className="text-base">{children}</span>
+      </Link>
+    </DrawerClose>
   );
 };
