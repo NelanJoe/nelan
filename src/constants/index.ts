@@ -7,6 +7,9 @@ import type {
 } from "@/types";
 
 const TECH_STACK = {
+  LARAVEL: "Laravel",
+  FILAMENT: "Filament",
+  MYSQL: "MySQL",
   REACT: "React.js",
   NEXT: "Next.js",
   TS: "TypeScript",
@@ -75,13 +78,33 @@ export const SOCIAL_LINKS: SocialLink[] = [
 // 2. Data Projects
 export const PROJECTS: (Project & { id: string })[] = [
   {
+    id: "performa",
+    title: "Perfomaku",
+    description: "Admin Page for Performa",
+    cover: "/images/performa.png",
+    href: "https://www.performaku.com/",
+    date: "2026",
+    className: "md:col-span-3",
+    tags: [TECH_STACK.LARAVEL, TECH_STACK.FILAMENT, TECH_STACK.MYSQL],
+  },
+  {
+    id: "digimax",
+    title: "Digimax",
+    description: "Admin Page for Digimax",
+    cover: "/images/digimax.png",
+    href: "https://digimaxnirankara.com/",
+    date: "2025",
+    className: "md:col-span-1",
+    tags: [TECH_STACK.LARAVEL, TECH_STACK.FILAMENT, TECH_STACK.MYSQL],
+  },
+  {
     id: "wealth_wise",
     title: "Wealth Wise",
     description: "Financial Tracker App",
     cover: "/images/wealth-wise.png",
     href: "https://wealth-wise-eight.vercel.app/",
     date: "2024",
-    className: "md:col-span-3",
+    className: "md:col-span-2",
     tags: [
       TECH_STACK.REACT,
       TECH_STACK.TS,
@@ -153,6 +176,14 @@ export const PROJECTS: (Project & { id: string })[] = [
 ];
 
 export const EXPERIENCES: (Experience & { id: string })[] = [
+  {
+    id: "web_developer",
+    href: "https://digimaxnirankara.com/",
+    title: "Web Developer",
+    company: "PT Digimax Daksa Nirankara",
+    description: "Fallback description...",
+    date: "February 2022 - August 2023",
+  },
   {
     id: "operational_staff",
     href: "https://nfacademy.id/",

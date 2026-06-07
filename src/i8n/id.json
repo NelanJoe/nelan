@@ -47,6 +47,14 @@
     "experience_title": "Pengalaman Kerja"
   },
   "Projects": {
+    "performa": {
+      "title": "Performaku",
+      "description": "Dashboard Admin untuk Performa"
+    },
+    "digimax": {
+      "title": "Digimax Nirankara",
+      "description": "Dashboard Admin untuk Digimax Nirankara"
+    },
     "wealth_wise": {
       "title": "Wealth Wise",
       "description": "Aplikasi Pelacak Keuangan"
@@ -74,6 +82,11 @@
     "description": "Kumpulan proyek yang pernah saya kerjakan."
   },
   "Experiences": {
+    "web_developer": {
+      "title": "Web Developer",
+      "description": "Magang sebagai pengembang web selama 3 bulan untuk mengambangkan admin dashboard Web Digimax & Performaku",
+      "date": "Desember 2025 - Februari 2026"
+    },
     "operational_staff": {
       "title": "Staf Operasional",
       "description": "Bekerja sebagai administrator Zoom untuk kelas Kampus Merdeka, Mengelola kelas Umum & Privat, Mengelola tautan kehadiran untuk mentee program Kampus Merdeka, Memelihara, membuat & mengelola sertifikat untuk mentee program Kampus Merdeka, Membantu pengajar ketika ada masalah di dalam atau di luar kelas.",

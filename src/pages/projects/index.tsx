@@ -43,7 +43,7 @@ export default function ProjectsPage() {
               <div>
                 <Image
                   src={project.cover}
-                  alt={tProjects(`${project.id}.title`)}
+                  alt={tProjects(`${project.title}.title`)}
                   width={400}
                   height={250}
                   className="aspect-video w-full rounded-t-md object-cover transition-all duration-150 group-hover:scale-105" // Tambahkan aspect-video agar rapi

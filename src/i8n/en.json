@@ -47,6 +47,15 @@
     "experience_title": "Work Experience"
   },
   "Projects": {
+    "performa": {
+      "title": "Performaku",
+      "description": "Admin Page for Performa"
+    },
+    "digimax": {
+      "title": "Digimax",
+      "description": "Admin Page for Digimax"
+    },
+
     "wealth_wise": {
       "title": "Wealth Wise",
       "description": "Financial Tracker App"
@@ -74,6 +83,11 @@
     "description": "A collection of projects I've worked on."
   },
   "Experiences": {
+    "web_developer": {
+      "title": "Web Developer",
+      "description": "Internship as a web developer for 3 months to develop admin dashboard for Web Digimax & Performaku",
+      "date": "Desember 2025 - Februari 2026"
+    },
     "operational_staff": {
       "title": "Operational Staff",
       "description": "Working as a Zoom administrator for Kampus Merdeka classes, Manage Public classes & Private classes, Manage attendance link for mentees of Kampus Merdeka program, Maintain, create & manage certificates for Kampus Merdeka program mentee, Assist teachers when there are problems in the classroom or outside the classroom.",
