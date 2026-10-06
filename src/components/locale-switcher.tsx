@@ -1,21 +1,31 @@
 import { useRouter } from "next/router";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { Button } from "./ui/button";
-import Link from "next/link";
+
+
+const LOCALE_LABELS: Record<string, string> = {
+  en: "English",
+  id: "Indonesia",
+}
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
-  const { route } = useRouter();
-  const t = useTranslations("LocaleSwitcher");
+  const router = useRouter();
 
   const targetLocale = locale === "id" ? "en" : "id";
 
+  const handleSwith = () => {
+    const { pathname, query, asPath } = router;
+
+    const asPathWithoutLocale = asPath.replace(new RegExp(`^/${locale}`), "") || "";
+
+    router.replace({ pathname, query }, asPathWithoutLocale, { locale: targetLocale, scroll: false })
+  }
+
   return (
     <div>
-      <Button variant="outline" size="sm" asChild>
-        <Link href={route} locale={targetLocale}>
-          {t("label")}
-        </Link>
+      <Button variant="outline" size="sm" onClick={handleSwith}>
+        {LOCALE_LABELS[targetLocale]}
       </Button>
     </div>
   );
