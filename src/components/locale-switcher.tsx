@@ -4,8 +4,8 @@ import { Button } from "./ui/button";
 
 
 const LOCALE_LABELS: Record<string, string> = {
-  en: "English",
-  id: "Indonesia",
+  en: "En",
+  id: "Id",
 }
 
 export default function LocaleSwitcher() {
