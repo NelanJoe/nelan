@@ -46,8 +46,9 @@ export default function ProjectsPage() {
                   alt={tProjects(`${project.id}.title`)}
                   width={400}
                   height={250}
-                  className="aspect-video w-full rounded-t-md object-cover transition-all duration-150 group-hover:scale-105" 
+                  className="aspect-video w-full rounded-t-md object-cover transition-all duration-150 group-hover:scale-105"
                   loading="eager"
+                  fetchPriority="high"
                 />
               </div>
               <div className="space-y-4 p-4">

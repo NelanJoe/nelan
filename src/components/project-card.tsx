@@ -15,6 +15,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           src={project.cover}
           width={200}
           height={200}
+          loading="eager"
+          fetchPriority="high"
           className="w-full rounded-md border border-black/20 bg-cover object-cover md:h-50 lg:h-55 dark:border-white/20"
         />
       }
