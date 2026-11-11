@@ -3,6 +3,7 @@ import { withContentCollections } from "@content-collections/next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  allowedDevOrigins: ['127.0.0.1'],
   reactStrictMode: true,
   images: {
     remotePatterns: [

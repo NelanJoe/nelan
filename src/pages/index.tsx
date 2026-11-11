@@ -4,11 +4,11 @@ import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import path from "path";
 import fs from "fs/promises";
+import { Mascot } from "page-mascot";
 
 import DefaultLayout from "@/layouts/default";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { Button } from "@/components/ui/button";
-import ProjectCard from "@/components/project-card";
 import ExperienceCard from "@/components/experience-card";
 import { EXPERIENCES, PROJECTS } from "@/constants";
 import Image from "next/image";
@@ -30,7 +30,12 @@ export default function Home() {
       >
         <div className="space-y-5">
           <div>
-            <h2 className="animate-in fade-in text-lg leading-relaxed font-semibold duration-150">
+            <Mascot
+              directions="/mascots/cap-directions.webp"
+              reactions="/mascots/cap-reactions.webp" />
+          </div>
+          <div>
+            <h2 className="animate-in fade-in text-2xl leading-relaxed font-semibold duration-150">
               {t("name")}
             </h2>
             <p>{t("tagline")}</p>

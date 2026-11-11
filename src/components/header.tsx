@@ -31,19 +31,6 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/30 backdrop-blur-3xl dark:bg-zinc-900/10">
       <nav className="mx-auto flex h-20 max-w-3xl items-center justify-between px-4">
         <div className="flex items-center space-x-5">
-          <Link href="/">
-            <Avatar>
-              <AvatarFallback>Ne</AvatarFallback>
-              <AvatarImage
-                src="https://avatars.githubusercontent.com/u/49295389?v=4"
-                alt="avatar"
-                decoding="async"
-                loading="lazy"
-                width={32}
-                height={32}
-              />
-            </Avatar>
-          </Link>
           {isDesktop && <DesktopView hidden={isDesktop ? "flex" : "hidden"} />}
         </div>
         <div className="flex items-center space-x-2">
